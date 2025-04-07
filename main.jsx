@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react'
 import ReactDOM from 'react-dom/client'
 
@@ -13,7 +12,7 @@ const App = () => {
     setLoading(true);
     setResult(null);
     try {
-      const res = await fetch(`https://spongebot-api.onrender.com/analyse?symbol=${symbol}`);
+      const res = await fetch(`https://spongebot-backend.onrender.com/analyse?symbol=${symbol}`);
       const data = await res.json();
       setResult(data);
     } catch (err) {
